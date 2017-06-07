@@ -1,0 +1,110 @@
+html,body{
+    margin:0 !important;
+    padding: 0 !important;
+    background-color: #FFF !important;
+}
+
+.header-div{
+  padding: 20px;
+}
+
+.border-right-none{
+    border-right: 0 !important;
+}
+.border-left-none{
+    border-left: 0 !important;
+}
+
+.padding-top-clear{
+    padding-top: 0 !important;
+}
+.padding-bottom-clear
+{
+    padding-bottom:0 !important;
+}
+.img-social{
+    padding-top: 10px;
+    height: 35px;
+    width: 35px;
+ }
+
+.imagem-dimensao{
+    height: 500px !important;
+    width: 900px !important;
+}
+
+.galeria-img{
+  height: 200px !important;
+  width: 300px !important;
+}
+
+div.col-md-6 {
+    > img{
+        width: 600px;
+        height: 200px;
+    }
+}
+
+#navbar{
+    font-size: 12pt;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+div#acesso{
+    height:150px;
+}
+
+.listServicosHorarios{
+    list-style:none;
+    font-size: 12pt;
+}
+
+hr{
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+fieldset{
+  >img{
+        height: 250px;
+        width: 300px;
+        margin-left: 6%;
+  }
+}
+
+.icone{
+    width: 32px;
+    height: 32px;
+}
+
+div {
+  > a , > a:hover, > a:link {
+        text-decoration: none;
+        color:#FFF;
+  }
+}
+
+footer , .header-background{
+    background-color: black !important;
+}
+
+#footerlogo{
+    width: 72px;
+    height: 72px;
+}
+
+div {
+  > section {
+    > div {
+      > img{
+          height: 200px;
+          width: 300px;
+      }
+    }
+  }
+}
+
+#qrcode{
+    height: 300px;
+    width: 300px;
+}
