@@ -15,4 +15,5 @@
   @component('site.homeComponents.listhome') @endcomponent
   @component('site.default.emailland') @endcomponent
   @component('site.default.servicos') @endcomponent
+
 @endsection
