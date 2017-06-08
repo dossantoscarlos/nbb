@@ -53,10 +53,10 @@
       </select>
       </div>
     <div class='form-group col-lg-8'>
-      <input type="file" accept="image/*" class="form-control sr-only"  name="file_show" required multiple id="file_show">
+      <input type="file" accept="image/*" class="form-control sr-only"  name="file_show[]" required multiple id="file_show">
       <div class='customBackground'>
         <span id='simulaFile'>Nenhum arquivo selecionado...&nbsp;</span>
-        <label for='file_show' name='label' id='label' class='btn btn-success'>Upload File</label>
+        <label for='file_show' name='label[]' id='label' class='btn btn-success'>Upload File</label>
       </div>
     </div>
       <div class='form-group col-lg-8'>
