@@ -18,8 +18,8 @@ class GaleriaController extends Controller
       $galeria = new Galeria();
       $servico = Servico::todasConsulta();
       if($request->isMethod('post')):
-        if($request->file('file_show')):
-          $formFile = Storage::putFile('images',$request->file(['file_show']));
+        if($request->file('upload')):
+          $formFile = Storage::putFile('images',$request->file(['upload[]']));
           $url = Storage::url($formFile);
           /*
             $galeria->nomefoto = $request->input('galeria');

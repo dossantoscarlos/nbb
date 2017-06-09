@@ -22,6 +22,10 @@ class ComposerStaticInitfdd5243830c8baa2d7e4a2192b5d28ff
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'k' => 
+        array (
+            'kartik\\plugins\\fileinput\\' => 25,
+        ),
         'X' => 
         array (
             'XdgBaseDir\\' => 11,
@@ -104,6 +108,10 @@ class ComposerStaticInitfdd5243830c8baa2d7e4a2192b5d28ff
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+        ),
+        'kartik\\plugins\\fileinput\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/bootstrap-fileinput',
         ),
         'XdgBaseDir\\' => 
         array (
