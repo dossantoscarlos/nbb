@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'CLEARDB_DATABASE_URL'), //usar esta string se o servidor na for  o heroku 'mysql'
 
     /*
     |--------------------------------------------------------------------------
