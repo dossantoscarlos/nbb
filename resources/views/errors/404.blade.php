@@ -10,11 +10,7 @@
     <section class='container-fluid'>
     <div class='container text-center'>
         <h1 class='panel-heading'>404</h1>
-        <span><small>pagina nao encontrada</small><span><br>
-        <p class='text-justify'>
-            <ul class=>
-               <li></li> 
-        </p>
+        <h2>{{ $exception->getMessage() }}</h2>
     </div>
 </section>
 </body>
