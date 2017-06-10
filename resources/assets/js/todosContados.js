@@ -4,8 +4,8 @@ $(document).ready(function (){
         'use strict';
        $(this).click(function(){
             const protocolo = location.protocol.concat('//');
-            const host = location.host;
-            const uri = "/nbb-admin/contados/json/";
+            const host = location.URL;
+            const uri = "/json/";
             const http = protocolo.concat(host.concat(uri));
             const agenda = $(this).attr('data-id');
             if(valida(agenda)==false)

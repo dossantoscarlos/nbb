@@ -1,7 +1,7 @@
 {{-- Styles --}}
 <link rel="stylesheet" href="{{asset('css/nbb_signin.css')}}">
 <link href="{{ asset('css/app.css') }}" rel="stylesheet"/>
-<link rel="stylesheet" href="/css/dashboard.css">
+<link rel="stylesheet" href="{{asset("/css/dashboard.css")}}">
 <style type='text/css'>
   body,html{
     padding: 0px;

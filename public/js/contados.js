@@ -10338,8 +10338,8 @@ return jQuery;
 
     $(this).click(function () {
       var protocolo = location.protocol.concat('//');
-      var host = location.host;
-      var uri = "/nbb-admin/contados/json/";
+      var host = location.URL;
+      var uri = "/json/";
       var http = protocolo.concat(host.concat(uri));
       var agenda = $(this).attr('data-id');
       if (valida(agenda) == false) {
