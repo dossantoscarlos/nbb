@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsgl'), //usar esta string se o servidor na for  o heroku 'mysql'
+    'default' => env('DB_CONNECTION', 'pgsql'), //usar esta string se o servidor na for  o heroku 'mysql'
 
     /*
     |--------------------------------------------------------------------------
