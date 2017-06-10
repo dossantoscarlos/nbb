@@ -10340,10 +10340,10 @@ return jQuery;
       var protocolo = location.protocol.concat('//');
       var host = location.URL;
       var uri = "/json/";
-      var http = protocolo.concat(host.concat(uri));
+      //const http = protocolo.concat(host.concat(uri));
       var agenda = $(this).attr('data-id');
       if (valida(agenda) == false) {
-        $.getJSON(http + agenda).done(function (data) {
+        $.getJSON(host + agenda).done(function (data) {
           $('#nome').text(data[0].nome);
           $('#mensagem').text(data[0].mensagem);
           $('#email').text(data[0].email);
@@ -10351,7 +10351,7 @@ return jQuery;
           $('#assunto').text(data[0].servico);
           $('#enviarEmail').attr('href', "mailto://".concat(data[0].email));
         }).fail(function () {
-          console.log('erro ao receber resposta', http.concat(agenda));
+          console.log('erro ao receber resposta', host.concat(agenda));
         });
       }
     });
