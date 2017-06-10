@@ -6,11 +6,11 @@ $(document).ready(function (){
             const protocolo = location.protocol.concat('//');
             const host = location.URL;
             const uri = "/json/";
-            const http = protocolo.concat(host.concat(uri));
+            //const http = protocolo.concat(host.concat(uri));
             const agenda = $(this).attr('data-id');
             if(valida(agenda)==false)
             {
-              $.getJSON(http + agenda)
+              $.getJSON(host + agenda)
                 .done(function(data){
                   $('#nome').text(data[0].nome);
                   $('#mensagem').text(data[0].mensagem);
@@ -19,7 +19,7 @@ $(document).ready(function (){
                   $('#assunto').text(data[0].servico);
                   $('#enviarEmail').attr('href',"mailto://".concat(data[0].email));
                 }).fail(function(){
-                    console.log('erro ao receber resposta', http.concat(agenda));
+                    console.log('erro ao receber resposta', host.concat(agenda));
                 });
             }
           });
