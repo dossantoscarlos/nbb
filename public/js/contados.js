@@ -10337,13 +10337,11 @@ return jQuery;
     'use strict';
 
     $(this).click(function () {
-      var protocolo = location.protocol.concat('//');
-      var host = location.URL;
-      var uri = "/json/";
-      //const http = protocolo.concat(host.concat(uri));
+      var host = location.href;
+      var http = host.replace('filtro', "json/");
       var agenda = $(this).attr('data-id');
       if (valida(agenda) == false) {
-        $.getJSON(host + agenda).done(function (data) {
+        $.getJSON(http + agenda).done(function (data) {
           $('#nome').text(data[0].nome);
           $('#mensagem').text(data[0].mensagem);
           $('#email').text(data[0].email);
@@ -10351,13 +10349,12 @@ return jQuery;
           $('#assunto').text(data[0].servico);
           $('#enviarEmail').attr('href', "mailto://" + data[0].email);
         }).fail(function () {
-          console.log('erro ao receber resposta', host + agenda);
+          console.log('erro ao receber resposta', http + agenda);
         });
       }
     });
   });
 });
-
 function valida(agenda) {
   'use strict';
 
