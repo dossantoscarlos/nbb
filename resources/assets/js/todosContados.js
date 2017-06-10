@@ -17,9 +17,9 @@ $(document).ready(function (){
                   $('#email').text(data[0].email);
                   $('#telefone').text(data[0].tel);
                   $('#assunto').text(data[0].servico);
-                  $('#enviarEmail').attr('href',"mailto://".concat(data[0].email));
+                  $('#enviarEmail').attr('href',"mailto://" + data[0].email);
                 }).fail(function(){
-                    console.log('erro ao receber resposta', host.concat(agenda));
+                    console.log('erro ao receber resposta', host + agenda);
                 });
             }
           });
