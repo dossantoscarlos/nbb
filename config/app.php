@@ -169,7 +169,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
-
+        Spatie\Newsletter\NewsletterServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -226,8 +226,8 @@ return [
         'Storage' => Illuminate\Support\Facades\Storage::class,
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
+        'Newsletter' => Spatie\Newsletter\NewsletterFacade::class,
         'View' => Illuminate\Support\Facades\View::class,
-
     ],
 
 ];
