@@ -45,7 +45,7 @@
 {{--galeria--}}
   <div class='col-lg-12'>
     <form accept-charset="utf-8" name='form' enctype="multipart/form-data" method="post" action="{{route('pictures')}}">
-      {{csrf_field() }}
+      {{csrf_field()}}
       <div class="col-lg-8">
       <div class='form-group'>
           <label for='galeria'>Nome da Galeria: </label>
@@ -55,17 +55,17 @@
         <label for='servico'>Servico: </label>
         <select name='servico' id='servico' class='form-control'>
           <option value="">Selecione o servico</option>
-         @if(isset($servico))
-          @foreach($servico as $itens)
-            <option value="{{$itens->id}}" class='selector' >{{$itens->nome}}</option>
-          @endforeach
-         @endif
+          @if(isset($servico))
+            @foreach($servico as $itens)
+              <option value="{{$itens->id}}" class='selector' >{{$itens->nome}}</option>
+            @endforeach
+          @endif
         </select>
-        </div>
-        <div class='form-group'>
+      </div>
+      <div class='form-group'>
           <label for='descricao'>Descrição:</label>
           <textarea name='descrição' id='descricao' placeholder="Descreva sua galeria" class='form-control' rows="7"></textarea>
-        </div>
+      </div>
       <div class='text-center'>
         <Button class='btn btn-primary' type='Submit' id='enviar'>Salvar Galeria</Button>
       </div>
@@ -75,6 +75,10 @@
     </div>
     </form>
   </div>
- </div>
-</body>
+  <div class='col-lg-4'>
+  @if(isset($find))
+    <a href={{asset("storage/".$find->nomefoto)}}>image</a>
+  @endif
+</div>
+ </body>
 @endsection

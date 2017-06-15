@@ -4,6 +4,7 @@ namespace NBB\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Log;
 use NBB\Galeria;
 use NBB\Servico;
@@ -14,24 +15,24 @@ class GaleriaController extends Controller
       return view('site.galeria.index',compact('rotulo'));
    }
 
-   public function create( Request $request){
+   public function create(Request $request){
       $galeria = new Galeria();
+      $destino = "upload";
       $servico = Servico::todasConsulta();
       if($request->isMethod('post')):
         if($request->file('upload')):
-          $formFile = Storage::putFile('images',$request->file(['upload[]']));
-          $url = Storage::url($formFile);
-          /*
-            $galeria->nomefoto = $request->input('galeria');
-            $galeria->id_servico = $request->input('servico');
+          $this->validate($request,['upload'=>'required']);
+          $files = $request->file('upload');
+          $files_contando = count($files);
+          foreach ($files as $file):
+            $storage = Storage::put("uploads",$file);
+            $galeria->nomefoto = $storage;
             $galeria->save();
-           */
-
-          //$formFile = $request->file(['file_show']);
-         return redirect()->route('pictures');
+          endforeach;
+        return redirect()->route('pictures');
       endif;
     endif;
-    Log::info("consulta: ".$servico);
-    return view('admin.upload.photos', compact('servico'));
+    $find = Galeria::find(1);
+    return view('admin.upload.photos', compact(['servico','find']));
   }
 }

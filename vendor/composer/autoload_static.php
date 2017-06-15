@@ -12,9 +12,9 @@ class ComposerStaticInitfdd5243830c8baa2d7e4a2192b5d28ff
         '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
@@ -58,6 +58,8 @@ class ComposerStaticInitfdd5243830c8baa2d7e4a2192b5d28ff
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Spatie\\Newsletter\\' => 18,
+            'Spatie\\FlysystemDropbox\\' => 24,
+            'Spatie\\Dropbox\\' => 15,
         ),
         'R' => 
         array (
@@ -198,6 +200,14 @@ class ComposerStaticInitfdd5243830c8baa2d7e4a2192b5d28ff
         'Spatie\\Newsletter\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/laravel-newsletter/src',
+        ),
+        'Spatie\\FlysystemDropbox\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/flysystem-dropbox/src',
+        ),
+        'Spatie\\Dropbox\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/dropbox-api/src',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -354,12 +364,15 @@ class ComposerStaticInitfdd5243830c8baa2d7e4a2192b5d28ff
 
     public static $classMap = array (
         'AlterTableAgenda' => __DIR__ . '/../..' . '/database/migrations/2017_06_10_142231_alter_table_agenda.php',
+        'AlterTableGaleria' => __DIR__ . '/../..' . '/database/migrations/2017_06_14_195353___alter_table_galerias.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateSessionsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_24_081950_create_sessions_table.php',
         'CreateTableAgenda' => __DIR__ . '/../..' . '/database/migrations/2017_04_27_235918_create_table_agenda.php',
+        'CreateTableEventos' => __DIR__ . '/../..' . '/database/migrations/2017_06_14_201632___create_table_eventos.php',
+        'CreateTableImages' => __DIR__ . '/../..' . '/database/migrations/2017_06_14_201647___create_table_imagens.php',
         'CreateTableServicos' => __DIR__ . '/../..' . '/database/migrations/2017_05_28_144953_create_table_servicos.php',
         'CreateTablesGaleria' => __DIR__ . '/../..' . '/database/migrations/2017_05_04_050338_create_tables_galeria.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
@@ -2241,6 +2254,7 @@ class ComposerStaticInitfdd5243830c8baa2d7e4a2192b5d28ff
         'Monolog\\Registry' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Registry.php',
         'NBB\\Agenda' => __DIR__ . '/../..' . '/app/Agenda.php',
         'NBB\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'NBB\\Evento' => __DIR__ . '/../..' . '/app/Evento.php',
         'NBB\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'NBB\\Galeria' => __DIR__ . '/../..' . '/app/Galeria.php',
         'NBB\\Http\\Controllers\\AgendaController' => __DIR__ . '/../..' . '/app/Http/Controllers/AgendaController.php',
@@ -2260,6 +2274,7 @@ class ComposerStaticInitfdd5243830c8baa2d7e4a2192b5d28ff
         'NBB\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'NBB\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'NBB\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'NBB\\Imagem' => __DIR__ . '/../..' . '/app/Imagem.php',
         'NBB\\LandPage' => __DIR__ . '/../..' . '/app/LandPage.php',
         'NBB\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'NBB\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -3204,6 +3219,9 @@ class ComposerStaticInitfdd5243830c8baa2d7e4a2192b5d28ff
         'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/recursion-context/src/InvalidArgumentException.php',
         'SebastianBergmann\\ResourceOperations\\ResourceOperations' => __DIR__ . '/..' . '/sebastian/resource-operations/src/ResourceOperations.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Spatie\\Dropbox\\Client' => __DIR__ . '/..' . '/spatie/dropbox-api/src/Client.php',
+        'Spatie\\Dropbox\\Exceptions\\BadRequest' => __DIR__ . '/..' . '/spatie/dropbox-api/src/Exceptions/BadRequest.php',
+        'Spatie\\FlysystemDropbox\\DropboxAdapter' => __DIR__ . '/..' . '/spatie/flysystem-dropbox/src/DropboxAdapter.php',
         'Spatie\\Newsletter\\Exceptions\\InvalidNewsletterList' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/Exceptions/InvalidNewsletterList.php',
         'Spatie\\Newsletter\\Newsletter' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/Newsletter.php',
         'Spatie\\Newsletter\\NewsletterFacade' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/NewsletterFacade.php',
