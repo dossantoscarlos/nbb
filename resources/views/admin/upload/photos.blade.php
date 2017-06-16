@@ -77,7 +77,7 @@
   </div>
   <div class='col-lg-4'>
   @if(isset($find))
-    <a href={{asset("storage/".$find->nomefoto)}}>image</a>
+    <a href={{asset($find->nomefoto)}}>image</a>
   @endif
 </div>
  </body>

@@ -26,7 +26,7 @@ class GaleriaController extends Controller
           $files_contando = count($files);
           foreach ($files as $file):
             $storage = Storage::put("uploads",$file);
-            $galeria->nomefoto = $storage;
+            $galeria->nomefoto = "storage/".$storage;
             $galeria->save();
           endforeach;
         return redirect()->route('pictures');
