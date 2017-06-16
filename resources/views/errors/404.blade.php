@@ -1,17 +1,23 @@
 <!Doctype html>
-<html lang="{{ config('app.locale'}}">
+<html lang="{{ config('app.locale')}}">
     <head>
         @component('site.layouts.cabecalho.meta') @endcomponent
         <title>@yield('title')</title>
-        @component('site.layouts.cabecalho.scripts') @endcomponent
-        @component('site.layouts.cabecalho.styles') @endcomponent
+        <script>
+          window.onload = function(){
+              var body = document.getElementTagByName('body');
+              body.forEach(elem => {
+                elem.className="body";
+              });
+            };
+        </script>
+        <style >
+          .body{
+            background-image: url("{{asset('img/factordstudio.png')}}");
+            background-repeat: no-repeat;
+          }
+        </style>
     </head>
     <body>
-    <section class='container-fluid'>
-    <div class='container text-center'>
-        <h1 class='panel-heading'>404</h1>
-        <h2>{{ $exception->getMessage() }}</h2>
-    </div>
-</section>
-</body>
+    </body>
 </html>

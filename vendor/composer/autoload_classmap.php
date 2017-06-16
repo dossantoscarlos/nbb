@@ -7,13 +7,14 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AlterTableAgenda' => $baseDir . '/database/migrations/2017_06_10_142231_alter_table_agenda.php',
-    'AlterTableGaleria' => $baseDir . '/database/migrations/2017_06_14_195353___alter_table_galerias.php',
-    'AlterTableGalerias' => $baseDir . '/database/migrations/2017_06_16_173117__alter_table_galerias.php',
+    'AlterTableColumnNomegaleriaForTagGalerias' => $baseDir . '/database/migrations/2017_06_16_195145_alter_table_column_nomegaleria_for_tag_galerias.php',
+    'AlterTableGalerias' => $baseDir . '/database/migrations/2017_06_16_173117_alter_table_galerias.php',
+    'AlterTableRemoveGeneroGalerias' => $baseDir . '/database/migrations/2017_06_16_192907_alter_table_remove_genero_galerias.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateSessionsTable' => $baseDir . '/database/migrations/2017_05_24_081950_create_sessions_table.php',
     'CreateTableAgenda' => $baseDir . '/database/migrations/2017_04_27_235918_create_table_agenda.php',
-    'CreateTableEventos' => $baseDir . '/database/migrations/2017_06_14_201632___create_table_eventos.php',
-    'CreateTableImages' => $baseDir . '/database/migrations/2017_06_14_201647___create_table_imagens.php',
+    'CreateTableEventos' => $baseDir . '/database/migrations/2017_06_14_201632_create_table_eventos.php',
+    'CreateTableImagens' => $baseDir . '/database/migrations/2017_06_16_191624__create_table_imagens.php',
     'CreateTableServicos' => $baseDir . '/database/migrations/2017_05_28_144953_create_table_servicos.php',
     'CreateTablesGaleria' => $baseDir . '/database/migrations/2017_05_04_050338_create_tables_galeria.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',

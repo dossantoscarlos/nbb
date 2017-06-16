@@ -364,13 +364,14 @@ class ComposerStaticInitfdd5243830c8baa2d7e4a2192b5d28ff
 
     public static $classMap = array (
         'AlterTableAgenda' => __DIR__ . '/../..' . '/database/migrations/2017_06_10_142231_alter_table_agenda.php',
-        'AlterTableGaleria' => __DIR__ . '/../..' . '/database/migrations/2017_06_14_195353___alter_table_galerias.php',
-        'AlterTableGalerias' => __DIR__ . '/../..' . '/database/migrations/2017_06_16_173117__alter_table_galerias.php',
+        'AlterTableColumnNomegaleriaForTagGalerias' => __DIR__ . '/../..' . '/database/migrations/2017_06_16_195145_alter_table_column_nomegaleria_for_tag_galerias.php',
+        'AlterTableGalerias' => __DIR__ . '/../..' . '/database/migrations/2017_06_16_173117_alter_table_galerias.php',
+        'AlterTableRemoveGeneroGalerias' => __DIR__ . '/../..' . '/database/migrations/2017_06_16_192907_alter_table_remove_genero_galerias.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateSessionsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_24_081950_create_sessions_table.php',
         'CreateTableAgenda' => __DIR__ . '/../..' . '/database/migrations/2017_04_27_235918_create_table_agenda.php',
-        'CreateTableEventos' => __DIR__ . '/../..' . '/database/migrations/2017_06_14_201632___create_table_eventos.php',
-        'CreateTableImages' => __DIR__ . '/../..' . '/database/migrations/2017_06_14_201647___create_table_imagens.php',
+        'CreateTableEventos' => __DIR__ . '/../..' . '/database/migrations/2017_06_14_201632_create_table_eventos.php',
+        'CreateTableImagens' => __DIR__ . '/../..' . '/database/migrations/2017_06_16_191624__create_table_imagens.php',
         'CreateTableServicos' => __DIR__ . '/../..' . '/database/migrations/2017_05_28_144953_create_table_servicos.php',
         'CreateTablesGaleria' => __DIR__ . '/../..' . '/database/migrations/2017_05_04_050338_create_tables_galeria.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',

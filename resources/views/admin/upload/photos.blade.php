@@ -48,8 +48,8 @@
       {{csrf_field()}}
       <div class="col-lg-8">
       <div class='form-group'>
-          <label for='galeria'>Nome da Galeria: </label>
-          <input type='text' name='galeria' id='galeria' title='Nome da galeria' class='form-control' placeholder="Nome do evento">
+          <label for='tag'>Nome da Galeria: </label>
+          <input type='text' name='tag' id='tag' title='Nome da galeria' class='form-control' placeholder="Nome do evento">
        </div>
       <div class='form-group'>
         <label for='servico'>Servico: </label>
