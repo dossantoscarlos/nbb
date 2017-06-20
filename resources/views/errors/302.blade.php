@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	 <!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-	<title>500 - Error Interno</title>
+	<title>302 - Pagina Temporariamente Movida</title>
 	<link rel="stylesheet" href="{{asset('css/error.min.css')}}"/>
 	<link rel="stylesheet" href="{{asset('css/vendor.min.css')}}"/>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -43,8 +43,8 @@
 <body>
 	<div class="layout-simple-page__container">
 	<div class="aw-error-panel">
-			<h1 class="aw-error-panel__code"> <i class="fa fa-location-arrow"></i> 500</h1>
-			<h2 class="aw-error-panel__title">Error interno contact o WebMaster</h2>
+			<h1 class="aw-error-panel__code"> <i class="fa fa-location-arrow"></i> 403</h1>
+			<h2 class="aw-error-panel__title">Página Movida Temporariamente</h2>
 			<div class="aw-error-panel__description">
 					Desculpe, a página que você tentou acessar não foi encontrada ou não existe mais.
 					Verifique se a URL está correta ou entre em contato com a gente se precisar de ajuda.

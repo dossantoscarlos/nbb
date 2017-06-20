@@ -14,6 +14,7 @@ const { mix } = require('laravel-mix');
 mix.js('resources/assets/js/app.js', 'public/js')
    .js('resources/assets/js/holder.min.js', 'public/js')
    .js('resources/assets/js/todosContados.js', 'public/js/contados.js')
+   .sass('resources/assets/sass/error.css', 'public/css')
    .sass('resources/assets/sass/app.scss', 'public/css')
    .sass('resources/assets/sass/nbb_signin.scss', 'public/css')
    .sass('resources/assets/sass/master.scss', 'public/css')
