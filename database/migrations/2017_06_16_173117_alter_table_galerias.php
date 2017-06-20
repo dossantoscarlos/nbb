@@ -15,9 +15,7 @@ class AlterTableGalerias extends Migration
     {
             Schema::table('galerias', function (Blueprint $table) {
                 $table->string('nomegaleria',100);
-                if (Schema::hasColumn('galerias', 'nomefoto')) {
-                    $table->renameColumn('nomefoto','url');
-                }
+                $table->renameColumn('nomefoto','url');
                 $table->string('nome');
             });
     }

@@ -17,7 +17,6 @@ class CreateTablesGaleria extends Migration
             $table->increments('id');
             $table->string('genero');
             $table->string('nomefoto');
-            //$table->engine='InnoDB';
             $table->timestamps();
         });
     }
