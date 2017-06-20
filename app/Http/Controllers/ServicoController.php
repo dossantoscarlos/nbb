@@ -17,12 +17,16 @@ class ServicoController extends Controller
 
     public function create(Request $request){
         if($request->isMethod('post')){
+          if($request->file('file')):
             $this->validate($request,['servico' => 'required|max:30', 'descricao' => 'required|max:400']);
+
             $servico = new Servico();
             $servico->nome = $request->input('servico');
+        $servico->file = 
             $servico->descricao = $request->input('descricao');
             $servico->save();
             return redirect()->route('create_servico');
+          endif;
         }
         return view('admin.servico.create');
     }
