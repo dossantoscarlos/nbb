@@ -13,11 +13,13 @@ class AlterTableGalerias extends Migration
      */
     public function up()
     {
-        Schema::table('galerias', function (Blueprint $table) {
-            $table->string('nomegaleria',100);
-            $table->renameColumn('nomefoto','url');
-            $table->string('nome');
-        });
+        if (Schema::hasColumn('galerias', ['nomegaleria','nomefoto'])) {
+            Schema::table('galerias', function (Blueprint $table) {
+                $table->string('nomegaleria',100);
+                $table->renameColumn('nomefoto','url');
+                $table->string('nome');
+            });
+        }
     }
 
     /**
