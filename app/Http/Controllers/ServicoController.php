@@ -14,15 +14,13 @@ class ServicoController extends Controller
                  ];
       return view('site.servico.index', compact('servicos'));
     }
-
     public function create(Request $request){
         if($request->isMethod('post')){
           if($request->file('file')):
             $this->validate($request,['servico' => 'required|max:30', 'descricao' => 'required|max:400']);
-
             $servico = new Servico();
             $servico->nome = $request->input('servico');
-        $servico->file = 
+            $servico->icon = Storage::put('uploads',$request->input('file')); 
             $servico->descricao = $request->input('descricao');
             $servico->save();
             return redirect()->route('create_servico');
