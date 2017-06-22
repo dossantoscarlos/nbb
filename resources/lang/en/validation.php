@@ -117,6 +117,9 @@ return [
         'tel' => [
           'required' => 'Forneça o numero de seu telefone por favor',
           'max'      => 'O telefone execedeu o tamanho  de numeros validos',
+        ],
+        'servico' =>[
+            'required' => 'Forneça o nome do :attribute'
         ]
     ],
 
