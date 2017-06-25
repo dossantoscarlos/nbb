@@ -19,19 +19,7 @@ class Agenda extends Model
     }
 
     public static function validaSelect($valor){
-      $servicos = ['Noiva','Maquiagem Profissional','Desgner de Penteados',
-                   'Permanente de Cilios','Alongamento de Cilios',
-                   'Desgner de sobrancelhas'];
-
-      if(isset($valor)){
-          foreach ($servicos as $value){
-              if($valor===$value):
-                  return $servicos = [$valor];
-              endif;
-            }
-       }else{
-          return $servicos;
-        }
+        return DB::table('servicos')->where('nome', $valor)->get();
     }
     public static function pesquisa(){
         return DB::table('agendas')->paginate(10);

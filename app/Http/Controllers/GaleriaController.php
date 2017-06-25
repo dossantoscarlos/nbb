@@ -19,9 +19,6 @@ class GaleriaController extends Controller
       $galeria = new Galeria();
       $destino = "upload";
       $servico = Servico::todasConsulta();
-
-
-
       if($request->isMethod('post')):
         if($request->file('upload')):
           $this->validate($request,['upload'=>'required','servico'=>'required']);

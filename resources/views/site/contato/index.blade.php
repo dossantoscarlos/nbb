@@ -87,7 +87,7 @@
               @if(isset($servicos))
                 <select name="assunto" class='form-control' id="assunto">
                   @foreach($servicos as $servico)
-                    <option value='{{ $servico }}'>{{ $servico }}</option>
+                    <option value='{{ $servico->id }}'>{{ $servico->nome }}</option>
                   @endforeach
                 </select>
               @endif

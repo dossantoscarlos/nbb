@@ -4,10 +4,9 @@
 <style >
   /*about*/
   article.bg-info{
-    border:2px solid lightblue; 
+    border:2px solid lightblue;
     border-radius:12px !important;
   }
-
 </style>
 <section class='col-md-12'>
   <h1 class="col-md-12 col-lg-12">Ola eu sou {{'NBB'}}</h1>

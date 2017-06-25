@@ -15,7 +15,12 @@
        //disabilida os botoes com a classe btn e o atributo disabled
        $('.btn[disabled]').click(function(){return false;});
     });
-</script>
+    </script>
+
+    @yield('styles')
+
+    @yield('scripts')
+
 </head>
   <body data-spy="scroll" data-target="#navigator-bar">
     @component('site.layouts.corpo.header') @endcomponent
