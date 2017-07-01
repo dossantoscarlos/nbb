@@ -1,28 +1,44 @@
 @extends('site.layouts.app')
-@section('title',"$rotulo")
+@section('title',$galerias)
+@section('scripts')
+<script>
+  $(document).ready(function (){
+      $('#voltar').on('click',function(){
+          return history.back();
+      });
+  });
+
+</script>
+@endsection
 @section('content')
     <div class="container">
-      @for ($i=0; $i < 9; $i++)
-      <div class="col-lg-4">
+    @if(count($results)>0)
+      @foreach($results as $result)
+      <div class="col-lg-4" style="padding:20px">
         <figure class="figure">
-            <img src="{{asset('img/logo.jpg')}}" width="270" height='200' title='{{ $rotulo }}' class="img-rounded" alt="galeria">
+            <img src="{{asset($result->url)}}" data-toggle="modal" data-target=".bd-example-modal-lg" width="270" height='200' title='{{ $result->nome }}' class="img-rounded" alt="galeria">
+            <input type='hidden' value='id'/>
         </figure>
-        <dl class="col-lg-9" style="padding:3px">
-          <dt class="text-capitalize panel-heading">descricao</dt>
-            <dd class="text-left">
-              <p>
-                Titulo: <b>{{ "Image" }}</b><br/>
-                Data: <b>{{ "10/03/1991" }}</b><br>
-              </p>
-              <address class="text-left">
-                <span class="text-capitalize">Fotografo: <b>{{ "nome" }}</b></span><br>
-                <abbr title="E-mail">E-mail: </abbr>
-                <a class="text-left" href='malito://email@email.com'>{{ "Email@email.com" }}</a>
-              </address><!--dados de contado-->
-            </dd><!--descricao-->
-          </dl><!--fim da descricao -->
         </div><!-- col-lg-4 -->
-    @endfor
+      @endforeach
+    @else
+      <div class='alert alert-info text-center'>
+        <blockquote>
+          <h3>Não há fotos na galeria, volte mais tarde!!! </h3>
+          <a href='#' id='voltar' class='btn btn-success'>Voltar</a>
+        </blockquote>
+      </div>
+    @endif
   </div><!--container-->
+  {{-- modal --}}
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <img src="{{}}" id='modalImage' />
+    </div>
+  </div>
+</div>
+{{--fim modal--}}
 @component('site.default.servicos')@endcomponent
 @endsection

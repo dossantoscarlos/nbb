@@ -364,6 +364,7 @@ class ComposerStaticInitfdd5243830c8baa2d7e4a2192b5d28ff
 
     public static $classMap = array (
         'AddColumnIconTableServico' => __DIR__ . '/../..' . '/database/migrations/2017_06_22_193128_add_column_icon_table_servico.php',
+        'AddServicoIdGaleria' => __DIR__ . '/../..' . '/database/migrations/2017_06_25_190655_add_servico_id_galeria.php',
         'AlterTableAgenda' => __DIR__ . '/../..' . '/database/migrations/2017_06_10_142231_alter_table_agenda.php',
         'AlterTableColumnNomegaleriaForTagGalerias' => __DIR__ . '/../..' . '/database/migrations/2017_06_16_195145_alter_table_column_nomegaleria_for_tag_galerias.php',
         'AlterTableGalerias' => __DIR__ . '/../..' . '/database/migrations/2017_06_16_173117_alter_table_galerias.php',

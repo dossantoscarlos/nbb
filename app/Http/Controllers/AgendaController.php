@@ -14,6 +14,7 @@ class AgendaController extends Controller
     public function index($servico = null)
     {
         $servicos = Agenda::validaSelect($servico);
+
         return view('site.contato.index', compact(['servicos']));
     }
 

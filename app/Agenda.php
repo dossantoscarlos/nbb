@@ -18,8 +18,12 @@ class Agenda extends Model
                     'email'=>$valor['email']]);
     }
 
-    public static function validaSelect($valor){
+    public static function validaSelect($valor = null){
+      if ($valor!=null):
         return DB::table('servicos')->where('nome', $valor)->get();
+      else:
+        return DB::table('servicos')->get();
+      endif;
     }
     public static function pesquisa(){
         return DB::table('agendas')->paginate(10);

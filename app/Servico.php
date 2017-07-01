@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\DB;
 class Servico extends Model
 {
 
+    public function galeria(){
+      return $this->hasMany('NBB\Galeria');
+    }
+
     public function __constuct(){
       //
     }

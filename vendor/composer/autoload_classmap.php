@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AddColumnIconTableServico' => $baseDir . '/database/migrations/2017_06_22_193128_add_column_icon_table_servico.php',
+    'AddServicoIdGaleria' => $baseDir . '/database/migrations/2017_06_25_190655_add_servico_id_galeria.php',
     'AlterTableAgenda' => $baseDir . '/database/migrations/2017_06_10_142231_alter_table_agenda.php',
     'AlterTableColumnNomegaleriaForTagGalerias' => $baseDir . '/database/migrations/2017_06_16_195145_alter_table_column_nomegaleria_for_tag_galerias.php',
     'AlterTableGalerias' => $baseDir . '/database/migrations/2017_06_16_173117_alter_table_galerias.php',
