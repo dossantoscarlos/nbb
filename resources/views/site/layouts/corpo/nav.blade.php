@@ -18,7 +18,7 @@
                 </li>
                <li><a href="{{ url('/contato') }}" class='padding-bottom-clear padding-top-clear'>Contato</a></li>
                <li><a href="{{ url('/about') }}" class='padding-bottom-clear padding-top-clear'>Quem sou eu</a></li>
-               <li class="disabled">
+               <li class="disabled sr-only">
                     <a href="{{ url('/agendamento')}}" class='padding-bottom-clear padding-top-clear'>Agendamento</a>
                </li>
             </ul>
