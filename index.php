@@ -1,3 +1,2 @@
 <?php
-
-  require_once('/public/index.php');
+header('location:/public/');
