@@ -11,16 +11,16 @@
         <div class="navbar-collapse collapse" id='navbar' role='tablist'>
             <ul class="nav navbar-nav">
                <li>
-                    <a href="{{ url('/home') }}" class='padding-bottom-clear padding-top-clear'>Home</a>
+                    <a href="{{ route('home') }}" class='padding-bottom-clear padding-top-clear'>Home</a>
                </li>
                <li>
-                    <a href="{{ url('/servicos') }}" class='padding-bottom-clear padding-top-clear'>Serviços</a>
+                    <a href="{{ route('servicos.index') }}" class='padding-bottom-clear padding-top-clear'>Serviços</a>
                 </li>
                <li><a href="{{ url('/contato') }}" class='padding-bottom-clear padding-top-clear'>Contato</a></li>
-               <li><a href="{{ url('/about') }}" class='padding-bottom-clear padding-top-clear'>Quem sou eu</a></li>
-               <li class="disabled sr-only">
+               <li><a href="{{ route('about') }}" class='padding-bottom-clear padding-top-clear'>Quem sou eu</a></li>
+               {{-- <li class="disabled">
                     <a href="{{ url('/agendamento')}}" class='padding-bottom-clear padding-top-clear'>Agendamento</a>
-               </li>
+               </li> --}}
             </ul>
         </div>
     </div>
