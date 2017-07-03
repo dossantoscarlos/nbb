@@ -28,5 +28,19 @@
               <li><a href='{{ route("buscar") }}'><span class="glyphicon glyphicon-ok"></span> Todos Contados</a></li>
           </ul>
       </li>
+      <li class=" dropdown">
+          <a href='#' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class='glyphicon glyphicon-pencil'></span> Registrar</a>
+          <ul class="dropdown-menu dropdown-menu-right">
+              <li role='presentation' class="disabled">
+                <a href="#"><span class="glyphicon glyphicon-user"></span> Usuario</a>
+              </li>
+              <li role="presentation">
+                 <a href='{{ route("create_servico")}}'><span class="glyphicon glyphicon-envelope"></span> Contado</a>
+              </li>
+              <li role='presentation'>
+                <a href='{{ url("/")}}' ><span class='glyphicon glyphicon-th-list'></span> Servico</a>
+              </li>
+          </ul>
+       </li>
   </ul>
 </aside>
