@@ -46,7 +46,7 @@
     </ul>
  </div>
 @endif
-<form method='post' action='{{route("create_servico")}}' enctype='multipart/form-data'>
+<form method='post' action='{{route("servico")}}' enctype='multipart/form-data'>
     {{csrf_field()}}
     <div class='col-lg-12'>
         <div class='form-group col-lg-12'>

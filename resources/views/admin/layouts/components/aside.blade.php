@@ -16,7 +16,7 @@
                <a href="#"><span class="glyphicon glyphicon-plus-sign"></span> Usuario</a>
              </li>
              <li role="presentation">
-                <a href='{{ route("create_servico")}}'><span class="glyphicon glyphicon-folder-open"></span> Servicos</a>
+                <a href='{{ route("servico")}}'><span class="glyphicon glyphicon-folder-open"></span> Servicos</a>
              </li>
          </ul>
       </li>
@@ -29,13 +29,15 @@
           </ul>
       </li>
       <li class=" dropdown">
-          <a href='#' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class='glyphicon glyphicon-pencil'></span> Registrar</a>
+          <a href='#' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <b class='glyphicon glyphicon-pencil'></b> Deletar
+          </a>
           <ul class="dropdown-menu dropdown-menu-right">
               <li role='presentation' class="disabled">
                 <a href="#"><span class="glyphicon glyphicon-user"></span> Usuario</a>
               </li>
               <li role="presentation">
-                 <a href='{{ route("create_servico")}}'><span class="glyphicon glyphicon-envelope"></span> Contado</a>
+                 <a href='{{ route("servico")}}'><span class="glyphicon glyphicon-envelope"></span> Contado</a>
               </li>
               <li role='presentation'>
                 <a href='{{ url("/")}}' ><span class='glyphicon glyphicon-th-list'></span> Servico</a>

@@ -13,12 +13,11 @@ class ServicoController extends Controller
     public function index()
     {
         $this->servicos = Servico::paginar();
-        Log::info($this->servicos);
         return view('site.servico.index', ['servicos'=> $this->servicos]);
     }
 
-    public function create(Request $request){
-        if($request->isMethod('post')){
+    public function form(Request $request,$id = null ){
+        if($request->isMethod('post') && $id == null){
           $this->validate($request,['servico' => 'required|max:30','upload' => 'required','descricao' => 'required|max:400'],
                                    [ 'servico.required' => 'Forneça o nome do serviço','servico.max:30' => 'O tamanho maximo é de 30 caracteres',
                                      'upload.required' => 'Envie um icone para o serviço','descricao.required' => 'A descrição do serviço deve ser fornecida',
@@ -32,12 +31,13 @@ class ServicoController extends Controller
             $servico->icon = "storage/".$storage;
             $servico->descricao = $request->input('descricao');
             $servico->save();
-            Log::info($storage);
-            return redirect()->route('create_servico');
+            return redirect()->route('servico');
           endif;
+        }else if($request->isMethod('get')&& $id=null){
+          return view('admin.servico.create');
         }
-        return view('admin.servico.create');
     }
+
 
     public function repostaJson(){
         $array = Servico::todasConsulta();
