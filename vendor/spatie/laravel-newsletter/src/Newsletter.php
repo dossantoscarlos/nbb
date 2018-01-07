@@ -74,6 +74,19 @@ class Newsletter
     }
 
     /**
+     * @param string $listName
+     *
+     * @param array $parameters
+     * @return array|bool
+     */
+    public function getMembers($listName = '', $parameters = [])
+    {
+        $list = $this->lists->findByName($listName);
+
+        return $this->mailChimp->get("lists/{$list->getId()}/members", $parameters);
+    }
+
+    /**
      * @param string $email
      * @param string $listName
      *
@@ -86,6 +99,21 @@ class Newsletter
         $list = $this->lists->findByName($listName);
 
         return $this->mailChimp->get("lists/{$list->getId()}/members/{$this->getSubscriberHash($email)}");
+    }
+
+    /**
+     * @param string $email
+     * @param string $listName
+     *
+     * @return array|bool
+     *
+     * @throws \Spatie\Newsletter\Exceptions\InvalidNewsletterList
+     */
+    public function getMemberActivity($email, $listName = '')
+    {
+        $list = $this->lists->findByName($listName);
+
+        return $this->mailChimp->get("lists/{$list->getId()}/members/{$this->getSubscriberHash($email)}/activity");
     }
 
     /**
@@ -110,6 +138,27 @@ class Newsletter
     }
 
     /**
+     * @param string $email
+     * @param string $listName
+     *
+     * @return bool
+     */
+    public function isSubscribed($email, $listName = '')
+    {
+        $response = $this->getMember($email, $listName);
+
+        if (! isset($response)) {
+            return false;
+        }
+
+        if ($response['status'] != 'subscribed') {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
      * @param $email
      * @param string $listName
      *
@@ -123,6 +172,28 @@ class Newsletter
 
         $response = $this->mailChimp->patch("lists/{$list->getId()}/members/{$this->getSubscriberHash($email)}", [
             'status' => 'unsubscribed',
+        ]);
+
+        return $response;
+    }
+
+    /**
+     * Update the email address of an existing list member.
+     *
+     * @param string $currentEmailAddress
+     * @param string $newEmailAddress
+     * @param string $listName
+     *
+     * @return array|false
+     *
+     * @throws \Spatie\Newsletter\Exceptions\InvalidNewsletterList
+     */
+    public function updateEmailAddress($currentEmailAddress, $newEmailAddress, $listName = '')
+    {
+        $list = $this->lists->findByName($listName);
+
+        $response = $this->mailChimp->patch("lists/{$list->getId()}/members/{$this->getSubscriberHash($currentEmailAddress)}", [
+            'email_address' => $newEmailAddress,
         ]);
 
         return $response;
@@ -193,6 +264,12 @@ class Newsletter
         return $response;
     }
 
+    /**
+     * @param $campaignId
+     * @param $html
+     * @param array $options
+     * @return array|bool|false
+     */
     public function updateContent($campaignId, $html, $options = [])
     {
         $defaultOptions = compact('html');
@@ -229,7 +306,7 @@ class Newsletter
      */
     public function lastActionSucceeded()
     {
-        return ! $this->mailChimp->getLastError();
+        return $this->mailChimp->success();
     }
 
     /**

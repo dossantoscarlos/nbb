@@ -31,15 +31,12 @@
 @section('content')
 <div class="row">
   <div class='jumbotron bg-info'>
-    <p class='text-center'>Faça upload de suas fotos fotos. Upload ate a 30 imagens.</p>
+    <p class='text-center'>Faça upload de suas fotos fotos. Upload ate a 20 imagens.</p>
   </div>
-  @if (count($errors) > 0 )
+  @if (isset($errors) > 0 )
     <div class='alert alert-danger'>
       <ul>
-        @foreach($errors as $error)
-          <li>{{ $error }}</li>
-        @endforeach
-      </ul>
+        <?php var_dump($errors[0])?>
     </div>
   @endif
 {{--galeria--}}

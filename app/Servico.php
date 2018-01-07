@@ -30,5 +30,8 @@ class Servico extends Model
       return  DB::table('servicos')->paginate(9);
     }
 
+    public static function deletar($id){
+      return DB::table('servicos')->where('id',$id)->delete();
+    }
 
 }

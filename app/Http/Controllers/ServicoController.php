@@ -33,14 +33,27 @@ class ServicoController extends Controller
             $servico->save();
             return redirect()->route('servico');
           endif;
-        }else if($request->isMethod('get')&& $id=null){
+        }else if($request->isMethod('get') && $id=null){
           return view('admin.servico.create');
         }
     }
 
+    public function delete(Request $request){
+      if($request->isMethod('post')){
+        $id = $request->input('servico');
+        if(count(Servico::find($id))>0){
+           $serv = Servico::deletar($id);
+           return response()->json($serv);
+        }
+        return redirect()->route('servico');
+      }else{
+        $serv = Servico::todasConsulta();
+        return view('admin.servico.delete',compact('serv'));
+      }
+    }
 
     public function repostaJson(){
-        $array = Servico::todasConsulta();
+        $array = Servico::getInfo();
         return response()->json($array);
     }
 }

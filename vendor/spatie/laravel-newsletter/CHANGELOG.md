@@ -1,6 +1,22 @@
 # Changelog
 
-All Notable changes to `laravel-newsletter` will be documented in this file
+All notable changes to `laravel-newsletter` will be documented in this file
+
+## 3.7.0 - 2017-07-12
+
+- add `isSubscribed`
+
+## 3.6.1 - 2017-07-11
+
+- fix `lastActionSucceeded` check
+
+## 3.6.0 - 2017-06-29
+
+- add `getMembers` and `getMemberActivity`
+
+## 3.5.0 - 2017-06-23
+
+- add method to update existing email address
 
 ## 3.4.0 - 2017-01-23
 

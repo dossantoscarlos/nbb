@@ -14,7 +14,6 @@ class AgendaController extends Controller
     public function index($servico = null)
     {
         $servicos = Agenda::validaSelect($servico);
-
         return view('site.contato.index', compact(['servicos']));
     }
 
@@ -52,6 +51,15 @@ class AgendaController extends Controller
    public function recents(){
      $pesquisa = Agenda::recent();
      return view('admin.contado.ultimos', [ 'pesquisa' => $pesquisa]);
+   }
+
+   public function deletar(Request $request){
+      if($request->method('post')){
+        if($request->has('btn-submit')){
+          $operacao = $request->input('btn-submit');
+        }
+      }
+      return view('admin.contado.delete');
    }
 
 }

@@ -25,11 +25,13 @@ class GaleriaController extends Controller
       $galeria = new Galeria();
       $destino = "upload";
       $servico = Servico::todasConsulta();
+      
       if($request->isMethod('post')):
-        if($request->file('upload')):
-          $this->validate($request,['upload'=>'required','servico'=>'required']);
+       $this->validate($request,['upload'=>'required|mimes:jpg,png,jpeg,gif,bmp']); //se a validacao for acima da condicao isMethod o php lanca invalid request
+       Log::debug($request); 
+       if($request->file('upload')):
           $files = $request->file('upload');
-          $files_contando = count($files);
+           $files_contando = count($files);
           foreach ($files as $file):
             $storage = Storage::put("uploads",$file);
             $galeria->id_servico = $request->input('servico');

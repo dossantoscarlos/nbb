@@ -41,7 +41,7 @@
  <div class='col-lg-offset-4 col-lg-4 alert alert-danger'>
    <ul class='list'>
        @foreach($errors->all() as $error)
-          <li>{{ $error }}</li>
+          <li>{{ $error}}</li>
        @endforeach
     </ul>
  </div>

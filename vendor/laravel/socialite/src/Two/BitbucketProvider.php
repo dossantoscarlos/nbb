@@ -15,6 +15,13 @@ class BitbucketProvider extends AbstractProvider implements ProviderInterface
     protected $scopes = ['email'];
 
     /**
+     * The separating character for the requested scopes.
+     *
+     * @var string
+     */
+    protected $scopeSeparator = ' ';
+
+    /**
      * {@inheritdoc}
      */
     protected function getAuthUrl($state)

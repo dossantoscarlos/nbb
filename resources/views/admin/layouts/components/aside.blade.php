@@ -37,7 +37,7 @@
                 <a href="#"><span class="glyphicon glyphicon-user"></span> Usuario</a>
               </li>
               <li role="presentation">
-                 <a href='{{ route("servico")}}'><span class="glyphicon glyphicon-envelope"></span> Contado</a>
+                 <a href='{{ route("delete_servico")}}'><span class="glyphicon glyphicon-envelope"></span> Contado</a>
               </li>
               <li role='presentation'>
                 <a href='{{ url("/")}}' ><span class='glyphicon glyphicon-th-list'></span> Servico</a>
