@@ -10,7 +10,7 @@
 </style>
 <section class='col-md-12 col-sm-12 col-xs-12'>
   <h1 class="col-md-12 col-lg-12">Ola eu sou {{'NBB'}}</h1>
- <div class="row">
+ <div class="row justtify-content-center">
   <article class="col-lg-6 col-sm-12 col-md-6 col-xs-12">
     <img src='{{ secure_asset('img/maxresdefault.jpg') }}' alt='minha foto' title='quem sou' class="img-responsive block-center img-circle">
   </article>
