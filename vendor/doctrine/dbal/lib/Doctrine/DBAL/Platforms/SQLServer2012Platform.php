@@ -20,6 +20,10 @@
 namespace Doctrine\DBAL\Platforms;
 
 use Doctrine\DBAL\Schema\Sequence;
+use const PREG_OFFSET_CAPTURE;
+use function preg_match;
+use function preg_match_all;
+use function substr_count;
 
 /**
  * Platform to ensure compatibility of Doctrine with Microsoft SQL Server 2012 version.
@@ -109,14 +113,14 @@ class SQLServer2012Platform extends SQLServer2008Platform
      */
     protected function doModifyLimitQuery($query, $limit, $offset = null)
     {
-        if ($limit === null && $offset === null) {
+        if ($limit === null && $offset <= 0) {
             return $query;
         }
 
         // Queries using OFFSET... FETCH MUST have an ORDER BY clause
         // Find the position of the last instance of ORDER BY and ensure it is not within a parenthetical statement
         // but can be in a newline
-        $matches = array();
+        $matches = [];
         $matchesCount = preg_match_all("/[\\s]+order\\s+by\\s/im", $query, $matches, PREG_OFFSET_CAPTURE);
         $orderByPos = false;
         if ($matchesCount > 0) {

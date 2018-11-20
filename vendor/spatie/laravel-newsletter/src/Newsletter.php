@@ -138,27 +138,6 @@ class Newsletter
     }
 
     /**
-     * @param string $email
-     * @param string $listName
-     *
-     * @return bool
-     */
-    public function isSubscribed($email, $listName = '')
-    {
-        $response = $this->getMember($email, $listName);
-
-        if (! isset($response)) {
-            return false;
-        }
-
-        if ($response['status'] != 'subscribed') {
-            return false;
-        }
-
-        return true;
-    }
-
-    /**
      * @param $email
      * @param string $listName
      *
@@ -306,7 +285,7 @@ class Newsletter
      */
     public function lastActionSucceeded()
     {
-        return $this->mailChimp->success();
+        return ! $this->mailChimp->getLastError();
     }
 
     /**
