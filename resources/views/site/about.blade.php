@@ -8,12 +8,12 @@
     border-radius:12px !important;
   }
 </style>
-<section class='col-md-12'>
+<section class='col-md-12 col-sm-12 col-xs-12'>
   <h1 class="col-md-12 col-lg-12">Ola eu sou {{'NBB'}}</h1>
-  <article class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
+  <article class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
     <img src='{{ asset('img/maxresdefault.jpg') }}' alt='minha foto' title='quem sou' class="img-responsive block-center img-circle">
   </article>
-  <article class="col-lg-offset-1 col-lg-4 panel-body bg-info">
+  <article class="col-lg-offset-1 col-lg-4  col-sm-4 col-xs-4 panel-body bg-info">
     <dl>
       <dt class='text-center' > Bem vindo a NBB </dt>
       <dd class='text-justtify'>
