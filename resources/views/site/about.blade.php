@@ -13,8 +13,7 @@
   <article class="col-lg-6 col-sm-12 col-md-6 col-xs-12">
     <img src='{{ secure_asset('img/maxresdefault.jpg') }}' alt='minha foto' title='quem sou' class="img-responsive block-center img-circle">
   </article>
-  <p></p>
-  <article class="col-lg-offset-1 col-lg-4 col-md-4 col-sm-12 col-xs-12 panel-body bg-info">
+  <article class="col-lg-offset-1 col-lg-4 col-md-4 col-sm-12 col-xs-12 panel-body bg-info" style="margin-top: 2px;" >
     <dl>
       <dt class='text-center' > Bem vindo a NBB </dt>
       <dd class='text-justtify'>
