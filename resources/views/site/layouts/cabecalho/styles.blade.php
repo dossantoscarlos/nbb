@@ -4,6 +4,6 @@
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous">
 
-  <link href="{{asset('css/nbb.css')}}" rel='stylesheet'/>
-  <link rel="stylesheet" href="{{asset('/css/master.css')}}">
+  <link href="{{secure_asset('css/nbb.css')}}" rel='stylesheet'/>
+  <link rel="stylesheet" href="{{secure_asset('/css/master.css')}}">
 {{-- styles --}}
